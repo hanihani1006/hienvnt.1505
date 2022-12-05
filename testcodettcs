@@ -5,7 +5,7 @@
 using namespace std;
 void mainMenu();
 
-class Mângement
+class Management
 {
 	public:
 		Management()
