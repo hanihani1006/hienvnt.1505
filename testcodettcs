@@ -1,0 +1,23 @@
+#include<iostream>
+#include<fstream>
+#include<iomainip>
+
+using namespace std;
+void mainMenu();
+
+class Mângement
+{
+	public:
+		Management()
+	{
+		mainMenu()
+	}
+}
+void mainMenu()
+{
+	int lchoice
+}
+int main(){
+	Management ;
+	return 0;
+}
