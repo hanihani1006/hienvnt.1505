@@ -1,0 +1,15 @@
+#include<iostream>
+
+    Class String flightSchedule;
+    Class final String flightNumber;
+    Class final String fromWhichCity;
+    Class final String gate;
+    Class final String toWhichCity;
+    Class double distanceInMiles;
+    Class double distanceInKm;
+    Class String flightTime;
+    Class int numOfSeatsInTheFlight;
+    Class List<Customer> listOfRegisteredCustomersInAFlight;
+    Class int customerIndex;
+    Class static int nextFlightDay = 0;
+    Class static final List<Flight> flightList = new ArrayList<>();
