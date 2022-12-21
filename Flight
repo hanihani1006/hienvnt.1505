@@ -1,15 +1,50 @@
-#include<iostream>
+#include <iostream>
+#include <iomanip>
+#include "abskyairline.h"
+using namespace std;
 
-    Class String flightSchedule;
-    Class final String flightNumber;
-    Class final String fromWhichCity;
-    Class final String gate;
-    Class final String toWhichCity;
-    Class double distanceInMiles;
-    Class double distanceInKm;
-    Class String flightTime;
-    Class int numOfSeatsInTheFlight;
-    Class List<Customer> listOfRegisteredCustomersInAFlight;
-    Class int customerIndex;
-    Class static int nextFlightDay = 0;
-    Class static final List<Flight> flightList = new ArrayList<>();
+int reserve = 999;
+
+
+
+
+int seat[size];
+void seat_fill()
+{
+	for (int i = 0; i < size; i++)
+	{
+		seat[i] = 0;
+	}
+}
+
+bool taken=false;
+bool seat_no(int y)
+{
+
+        for (int i = 0; i < size; i++ )
+        {
+                if( seat[i] == -1 )
+                {
+				taken=true;
+  	                 cout << "Cho da co nguoi ngoi. \n";
+                        cout << "Vui long chon 1 so ghe khac tu ben duoi."<<endl;
+
+				int j = 1;
+				while ( j < size+1 )
+				{
+					if ( seat[j-1] == -1)
+					j++;
+					else
+					{
+						cout <<"|" << j << "|";
+						if ( j%10 == 0 )
+						cout << endl;
+						j++;
+					}
+
+                		}
+		}
+
+        }
+
+}
