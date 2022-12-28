@@ -1,11 +1,42 @@
 #include <iostream>
 #include <cstring>
-#include <stdio.h>
+#include<string.h>
+#include<sstream>
+#include<graphics.h>
+#include<vector>
+//*********************************************************************************************
 using namespace std;
 void welcomeScreen(int option);
+void loginadmin();
+void login();
+void registration();
 int main()
 {
 	welcomeScreen(2);
+	switch(choice)
+	{
+		case 0:
+			cout<<"Thanks for using this program.\nThis program is created by 2 newbie\n";
+			Sleep(3000);
+			exit(1);
+			break;
+		case 1:
+			loginadmin();
+			break;
+		case 2:
+			registrationadmin();
+			break;
+		case 3:
+			login();
+			break;
+		default:
+			system("cls");
+			cout<<"\t\t\t Please select from the options given above \n"<<endl;
+			main ();
+		case 4:
+			registration();
+			break;
+	}
 	return 0;
 
 }
@@ -40,4 +71,99 @@ int main()
         }
         
     }
+    //******************************************************************************************************************************
+  void loginadmin()
+{
+		int count;
+		string userIdadmin, password, idadmin, pass;
+//system("cls");
+	cout <<"                                                                                                         " <<endl;
+	cout <<"              .d8b.  d8888b. .88b  d88. d888888b d8b   db      db       .d88b.   d888b  d888888b d8b   db" <<endl;
+	cout <<"              d8' `8b 88  `8D 88'YbdP`88   `88'   888o  88      88      .8P  Y8. 88' Y8b   `88'   888o  88" <<endl;
+	cout <<"              88ooo88 88   88 88  88  88    88    88V8o 88      88      88    88 88         88    88V8o 88" <<endl;
+	cout <<"              88~~~88 88   88 88  88  88    88    88 V8o88      88      88    88 88  ooo    88    88 V8o88" <<endl;
+	cout <<"              88   88 88  .8D 88  88  88   .88.   88  V888      88booo. `8b  d8' 88. ~8~   .88.   88  V888" <<endl;
+	cout <<"              YP   YP Y8888D' YP  YP  YP Y888888P VP   V8P      Y88888P  `Y88P'   Y888P  Y888888P VP   V8P" <<endl;
+	cout <<"                                                                                                          " <<endl;
+	cout <<"                                                                                                          " <<endl; 
+	cout<<"Enter the  Username to login to the Management System: "<<endl;
+	cin>>userIdadmin;
+	cout<<"Enter the Password to login to the Management System: ";
+	cin>>password;
+		
+	ifstream input("admin.txt");
+		
+	while(input>>idadmin>>pass)
+	{
+	if(idadmin==userIdadmin && pass==password)
+		{
+			count=1;
+			system("cls");
+		}
+			}
+	input.close();
+		
+	if(count==1)
+	{
+		int choice;
+		cout<<userIdadmin<<"\n Your LOGIN is successfully as (admin)... For further Proceedings, enter a value from below...\n"<<endl;
+	cout <<"                                                                                                                                                                    " <<endl;
+	cout << "           d88888b db      db    db d888888b d8b   db  d888b       db   d8b   db d888888b d888888b db   db      d888888b d8888b. db    db .d8888. d888888b " <<endl;
+	cout << "           88'     88      `8b  d8'   `88'   888o  88 88' Y8b      88   I8I   88   `88'   `~~88~~' 88   88      `~~88~~' 88  `8D 88    88 88'  YP `~~88~~'" <<endl;
+	cout << "           88ooo   88       `8bd8'     88    88V8o 88 88           88   I8I   88    88       88    88ooo88         88    88oobY' 88    88 `8bo.      88   " <<endl;
+	cout << "           88~~~   88         88       88    88 V8o88 88  ooo      Y8   I8I   88    88       88    88~~~88         88    88`8b   88    88   `Y8b.    88   " <<endl;
+	cout << "           88      88booo.    88      .88.   88  V888 88. ~8~      `8b d8'8b d8'   .88.      88    88   88         88    88 `88. 88b  d88 db   8D    88   " <<endl;
+	cout << "           YP      Y88888P    YP    Y888888P VP   V8P  Y888P        `8b8' `8d8'  Y888888P    YP    YP   YP         YP    88   YD ~Y8888P' `8888Y'    YP   " <<endl;
+	cout << "                                                                                                                                                                   " <<endl;
+	cout << "                                                                                                                                                                   " <<endl;
+	cout << "             d88888b  .d88b.  d8888b.      d88888b d888888b db    db d88888b      d8888b. d88888b  .o88b.  .d8b.  d8888b. d88888b .d8888.                   " <<endl;
+	cout << "             88'     .8P  Y8. 88  `8D      88'       `88'   88    88 88'          88  `8D 88'     d8P  Y8 d8' `8b 88  `8D 88'     88'  YP                   " <<endl;
+	cout << "             88ooo   88    88 88oobY'      88ooo      88    Y8    8P 88ooooo      88   88 88ooooo 8P      88ooo88 88   88 88ooooo `8bo.                         YP " <<endl;
+	cout << "             88~~~   88    88 88`8b        88~~~      88    `8b  d8' 88~~~~~      88   88 88~~~~~ 8b      88~~~88 88   88 88~~~~~   `Y8b.                    " <<endl;
+	cout << "             88      `8b  d8' 88 `88.      88        .88.    `8bd8'  88.          88  .8D 88.     Y8b  d8 88   88 88  .8D 88.     db   8D      db db db db db " <<endl;
+	cout << "             YP       `Y88P'  88   YD      YP      Y888888P    YP    Y88888P      Y8888D' Y88888P  `Y88P' YP   YP Y8888D' Y88888P `8888Y'      VP VP VP VP YP " <<endl;
+	cout << "                                                                                                                                                                          " <<endl;
+	cout << "                                                                                                                                                                          " <<endl;	
+	cout<<"\t (a) Press 1 to Add new Passenger...                                                  "<<endl;
+	cout<<"\t (b) Press 2 to Search a Passenger...                                                 "<<endl;
+	cout<<"\t (c) Press 3 to Update the Data of the Passenger...                                   "<<endl;
+	cout<<"\t (d) Press 4 to Delete a Passenger...                                                 "<<endl;
+	cout<<"\t (e) Press 5 to Display all Passengers...                                             "<<endl;
+	cout<<"\t (f) Press 6 to Display all flights registered by a Passenger...                      "<<endl;
+	cout<<"\t (g) Press 7 to Display all registered Passengers is a flight...                      "<<endl;
+	cout<<"\t (h) Press 8 to Delete a flight...                                                    "<<endl;
+	cout<<"\t (i) Press 0 to Go to back to the Main Menu/Logout...                                 "<<endl;
+	cout<<"\n\t Enter the desired option: ";
+	cin>>choice;
+	cout<<endl;
+	}
+	else{
+	cout<<"\n LOGGIN ERROR!!! \n Please check your UserAdmin name and password\n"<<endl;
+	main();
+	}	
+	void registrationadmin ()
+	{
+		string ruserIdadmin,remail,rpassword,rpass;
+//system("cls"); open in a new tab
+	cout <<"                                                                                                                   " <<endl;
+	cout <<"                .d8b.  d8888b. .88b  d88. d888888b d8b   db      .d8888. d888888b  d888b  d8b   db db    db d8888b." <<endl;
+	cout <<"              d8' `8b 88  `8D 88'YbdP`88   `88'   888o  88      88'  YP   `88'   88' Y8b 888o  88 88    88 88  `8D" <<endl;
+	cout <<"              88ooo88 88   88 88  88  88    88    88V8o 88      `8bo.      88    88      88V8o 88 88    88 88oodD'" <<endl;
+	cout <<"              88~~~88 88   88 88  88  88    88    88 V8o88        `Y8b.    88    88  ooo 88 V8o88 88    88 88~~~  " <<endl;
+	cout <<"               88   88 88  .8D 88  88  88   .88.   88  V888      db   8D   .88.   88. ~8~ 88  V888 88b  d88 88     " <<endl;
+	cout <<"               YP   YP Y8888D' YP  YP  YP Y888888P VP   V8P      `8888Y' Y888888P  Y888P  VP   V8P ~Y8888P' 88     " <<endl;
+	cout <<"                                                                                                                    " <<endl;
+	cout <<"                                                                                                                     " <<endl;
+	cout<<"\t\t\t-----Welcome to the Administrator Registration Portal---------\n\n\n"<<endl;
+	cout<<"Enter your UserName to Register: ";
+	cin>>ruserIdadmin;
+	cout<<"Enter your Password to the Register: ";
+	cin>>rpassword;
+	ofstream f1("admin.txt", ios::app);
+	f1<<ruserIdadmin<<' '<<rpassword<<' '<<endl;
+	//system("cls");
+	cout<<"\n\t\t\t Registration is successfull! \n";
+	main();	
+	}
+    
 
