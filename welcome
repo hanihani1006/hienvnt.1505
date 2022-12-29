@@ -56,7 +56,7 @@ int main()
                                     
                     cout<<"888888b db      db    db d888888b d8b   db  d888b       db   d8b   db d888888b d888888b db   db      d888888b d8888b. db    db .d8888. d888888b      "<<endl;
                     cout<<"88'     88      `8b  d8'   `88'   888o  88 88' Y8b      88   I8I   88   `88'   `~~88~~' 88   88      `~~88~~' 88  `8D 88    88 88'  YP `~~88~~'      "<<endl;
-                                        cout<<"8ooo   88       `8bd8'     88    88V8o 88 88           88   I8I   88    88       88    88ooo88         88    88oobY' 88    88 `8bo.      88         "<<endl;
+                    cout<<"8ooo   88       `8bd8'     88    88V8o 88 88           88   I8I   88    88       88    88ooo88         88    88oobY' 88    88 `8bo.      88         "<<endl;
                                         cout<<"88~~~   88         88       88    88 V8o88 88  ooo      Y8   I8I   88    88       88    88~~~88         88    88`8b   88    88   `Y8b.    88         "<<endl;
                                         cout<<"88      88booo.    88      .88.   88  V888 88. ~8~      `8b d8'8b d8'   .88.      88    88   88         88    88 `88. 88b  d88 db   8D    88         "<<endl;
                                         cout<<"YP      Y88888P    YP    Y888888P VP   V8P  Y888P        `8b8' `8d8'  Y888888P    YP    YP   YP         YP    88   YD ~Y8888P' `8888Y'    YP         "<<endl;
@@ -165,5 +165,196 @@ int main()
 	cout<<"\n\t\t\t Registration is successfull! \n";
 	main();	
 	}
+//**************************************************************************************************************************************************************************************	
+void registration()
+{
+    string ruserId, remail, rpassword, rphonenumber, raddress, rage, rid, rmail, rphone, raddr, ra, rpass;
+    bool emailExists = false;
+//system("cls"); //cai nay de mo qua tab moi.
+	cout <<"                                                                                                                                                 " <<endl;
+	cout <<"                     .o88b. db    db .d8888. d888888b  .d88b.  .88b  d88. d88888b d8888b.      .d8888. d888888b  d888b  d8b   db db    db d8888b." <<endl;
+	cout <<"                    d8P  Y8 88    88 88'  YP `~~88~~' .8P  Y8. 88'YbdP`88 88'     88  `8D      88'  YP   `88'   88' Y8b 888o  88 88    88 88  `8D" <<endl;
+	cout <<"                    8P      88    88 `8bo.      88    88    88 88  88  88 88ooooo 88oobY'      `8bo.      88    88      88V8o 88 88    88 88oodD'" <<endl;
+	cout <<"                    8b      88    88   `Y8b.    88    88    88 88  88  88 88~~~~~ 88`8b          `Y8b.    88    88  ooo 88 V8o88 88    88 88~~~  " <<endl;
+	cout <<"                    Y8b  d8 88b  d88 db   8D    88    `8b  d8' 88  88  88 88.     88 `88.      db   8D   .88.   88. ~8~ 88  V888 88b  d88 88     " <<endl;
+	cout <<"                     `Y88P' ~Y8888P' `8888Y'    YP     `Y88P'  YP  YP  YP Y88888P 88   YD      `8888Y' Y888888P  Y888P  VP   V8P ~Y8888P' 88     " <<endl;
+	cout <<"                                                                                                                                                 " <<endl;
+	cout <<"                                                                                                                                                 " <<endl;
+    cout << "\t\t\t-----Welcome to the Customer Registration Portal---------\n\n\n"
+         << endl;
+    cout << "Enter your Username: ";
+    cin >> ruserId;
+
+    ifstream input("records.txt");
+    while (input >> rid >> rmail >> rpass >> rphone >> raddr >> ra)
+    {
+        if (rmail == remail)
+        {
+            emailExists = true;
+            break;
+        }
+    }
+    input.close();
+
+    if (emailExists)
+    {
+        cout << "Error: This email is already registered." << endl; 
+        return;
+    }
+
+    cout << "Enter your Email address: ";
+    cin >> remail;
+
+    cout << "Enter your Password: ";
+    cin >> rpassword;
+    // Add password validation here (e.g. minimum length)
+
+    cout << "Enter your Phone number: ";
+    cin >> rphonenumber;
+
+    cout << "Enter your address: ";
+    cin >> raddress;
+
+    cout << "Enter your age: ";
+    cin >> rage;
+
+    ofstream f1("records.txt", ios::app);
+    f1 << ruserId << ' ' << remail << ' ' << rpassword << ' ' << rphonenumber << ' ' << raddress << ' ' << rage << endl;
+    system("cls");
+    cout << "\n\t\t\t Registration is successfull! \n";
+    main();
+}
+//******************************************************************************************************************************************************************************************
+class Flight {
+public:
+int num;
+std::string flightSchedule;
+std::string flightNumber;
+std::string availableSeats;
+std::string from;
+std::string to;
+std::string arrivalTime;
+std::string flightTime;
+std::string gate;
+std::string distance;
+};
+
+void bookFlight() {
+	cout <<"                                                                                            " <<endl;	
+    cout <<"    d8888b.  .d88b.   .d88b.  db   dD      d88888b db      d888888b  d888b  db   db d888888b" << endl;
+    cout <<"    88  `8D .8P  Y8. .8P  Y8. 88 ,8P'      88'     88        `88'   88' Y8b 88   88 `~~88~~'" << endl;
+    cout <<"    88oooY' 88    88 88    88 88,8P        88ooo   88         88    88      88ooo88    88   " << endl;
+    cout <<"    88~~~b. 88    88 88    88 88`8b        88~~~   88         88    88  ooo 88~~~88    88   " << endl;
+    cout <<"    88   8D `8b  d8' `8b  d8' 88 `88.      88      88booo.   .88.   88. ~8~ 88   88    88   " << endl;
+    cout <<"    Y8888P'  `Y88P'   `Y88P'  YP   YD      YP      Y88888P Y888888P  Y888P  YP   YP    YP   " << endl;
+    cout <<"                                                                                            " <<endl;
+std::ifstream inFile("flights.txt");
+std::vector<Flight> flights;
+
+int num;
+std::string flightSchedule;
+std::string flightNumber;
+std::string availableSeats;
+std::string from;
+std::string to;
+std::string arrivalTime;
+std::string flightTime;
+std::string gate;
+std::string distance;
+
+while (inFile >> num >> flightSchedule >> flightNumber >> availableSeats >> from >> to >> arrivalTime >> flightTime >> gate >> distance) {
+flights.push_back({num, flightSchedule, flightNumber, availableSeats, from, to, arrivalTime, flightTime, gate, distance});
+}
+
+std::cout<< "+----+----------------+-----------+--------------+-------+-----+-------+----------+-------------+\n";
+std::cout<<"| Num | Flight Schedule| Flight No | Available Seats| From | To | Arrival Time | FlightTime |Gate| Distance |\n";
+std::cout<<"+-----+----------------+-----------+--------------+-------+-----+-------+----------+-------------+\n";
+
+for (std::vector<Flight>::const_iterator it = flights.begin(); it != flights.end(); ++it) {
+const Flight& flight = *it;
+std::cout << "|" << flight.num << "|" << flight.flightSchedule << "|" << flight.flightNumber << "|" << flight.availableSeats << "|" << flight.from << "|" << flight.to << "|" << flight.arrivalTime << "|" << flight.flightTime << "|" << flight.gate << "|" << flight.distance << std::endl;
+}
+}
+//*********************************************************************************************************************************************************************************************************************************************************************************
+
+void editUserInfo()
+{ 
+	cout <<"                                                                                             " <<endl;
+	cout <<"                    d88888b d8888b. d888888b d888888b      d888888b d8b   db d88888b  .d88b. " <<endl;
+	cout <<"                    88'     88  `8D   `88'   `~~88~~'        `88'   888o  88 88'     .8P  Y8." <<endl;
+	cout <<"                    88ooooo 88   88    88       88            88    88V8o 88 88ooo   88    88" <<endl;
+	cout <<"                    88~~~~~ 88   88    88       88            88    88 V8o88 88~~~   88    88" <<endl;
+	cout <<"                    88.     88  .8D   .88.      88           .88.   88  V888 88      `8b  d8'" <<endl;
+	cout <<"                    Y88888P Y8888D' Y888888P    YP         Y888888P VP   V8P YP       `Y88P' " <<endl;
+	cout <<"                                                                                             " <<endl;
+	string ruserId, remail, rphonenumber, raddress, rage, rid, rmail, rphone, raddr, ra;
+    bool emailExists = false;
+    cout << "Enter the new name of the Passenger: ";
+    cin >> ruserId;
+
+    ifstream input("records.txt");
+    ifstream output("update.txt");
+    while (input >> rid >> rmail >> rphone >> raddr >> ra)
+    {
+        if (rmail == remail)
+        {
+            emailExists = true;
+            break;
+        }
+    }
+    input.close();
+
+    if (emailExists)
+    {
+        cout << "Error: This email is already registered." << endl; 
+        return;
+    }
+
+    cout << "Enter the new email address of Passenger: ";
+    cin >> remail;
+
+    cout << "Enter the new phone number of Passenger: ";
+    cin >> rphonenumber;
+
+    cout << "Enter the new address of Passenger: ";
+    cin >> raddress;
+
+    cout << "Enter the new age of Passenger: ";
+    cin >> rage;
+
+    ofstream f1("records.txt", ios::app);
+    f1 << ruserId << ' ' << remail << ' ' << ' ' << rphonenumber << ' ' << raddress << ' ' << rage << endl;
+    system("cls");
+    cout << "\n\t\t\t Update data is successfull! \n";
+    main();
+	
+	class Update {
+	public:
+	int num;
+	std::string userID;
+	std::string passengerName;
+	std::string age;
+	std::string emailID;
+	std::string homeAddress;
+	std::string phoneNumber;
+};
+	std::ifstream inFile("update.txt");
+	int update;
+	int num;
+	std::string userID;
+	std::string passengerName;
+	std::string age;
+	std::string emailID;
+	std::string homeAddress;
+	std::string phoneNumber;
+	while (inFile >> num >> userID >> passengerName >> age >> emailID >> homeAddress >> phoneNumber) {
+	//update.push_back({num, userID, passengerName, age, emailID, homeAddress, phoneNumber});
+}
+
+std::cout<< "+----+----------------+-----------+--------------+-------+-----+-------+----+\n";
+std::cout<<"| Num | UserID | Passenger Names | Age | EmailID | HomeAddress | PhoneNumber |\n";
+std::cout<<"+-----+----------------+-----------+--------------+-------+-----+-------+----+\n";
+//std::cout << "|" << update.num << "|" << update.userID << "|" << update.passengerName << "|" << update.age << "|" << update.emailID << "|" << update.homeAddress << "|" << update.phoneNumber << std::endl;	
+}
     
 
