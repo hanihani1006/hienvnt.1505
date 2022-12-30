@@ -9,4 +9,5 @@ Nội dung chi tiết của từng phần:
 - Trong class flight em đã hiểu cách khởi tạo các biến khi thực hiện chương trình. Khi khách đặt vé của chuyến bay, khách có thể biết được chỗ ngồi, số lượng vé, số hiệu chuyến bay, thời gian bay, địa điểm đi và đến.
 
 Khó khăn gặp phải khi làm:
+
 Việc chuyển từ ngôn ngữ Java sang ngôn ngữ C++ khi mà chính ngôn ngữ Java em vẫn chưa hiểu rõ hoạt động như thế nào nên đến khi viết lại qua c++ nó có chút khó khăn với em. Và kiến thức lập trình em cũng chưa vững nên em cũng chưa hoàn thành hết phần đề như thầy đã giao. 
