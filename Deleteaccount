@@ -1,0 +1,74 @@
+#include<iostream>
+#include<fstream>
+#include<string.h>
+#include <sstream>
+#include<graphics.h>
+#include <vector>
+void deleteAccount()
+{
+	int cancel=0;
+void airlines:: cancel_reservation()	//This function cancels reservation.
+{	int num;
+	cout << "Please Enter your reservation Number here: ";
+	cin >> num;
+
+		node *cur = start;
+		if(cur!=NULL)
+		{ // error checking for empty node deletion which cause segm fault error.
+
+		if ( start->reserve_num == num )	//first node.
+		{
+			node *del = start;
+			start = start->next;
+			delete del;
+			seat[0] = 0;
+			cancel++;
+			return;
+		}
+		else
+		{
+			node *pre, *cur; 	//To delete a middle or last node.
+			pre = start;
+			cur = start->next;
+			while(cur != NULL)
+			{
+				if ( cur->reserve_num == num )
+						break;
+				pre = cur;
+				cur = cur->next;
+			}
+			seat[cur->seat_num-1] = 0;	
+			if (cur != NULL )
+			pre->next = cur->next;
+				
+		}
+
+	cancel++;
+	//reserve--;
+	//temp->reserve_num=reserve;
+
+		}// error checking if statement ends here
+		else
+		{
+		cout<<"!!! *** Nothing to delete or invalid entry *** !!! \n"<<endl;
+		}
+	
+}
+std::ifstream inFile("update_delete.txt");
+	int delete;
+	int num;
+	std::string userID;
+	std::string passengerName;
+	std::string age;
+	std::string emailID;
+	std::string homeAddress;
+	std::string phoneNumber;
+	while (inFile >> num >> userID >> passengerName >> age >> emailID >> homeAddress >> phoneNumber) {
+	//update.push_back({num, userID, passengerName, age, emailID, homeAddress, phoneNumber});
+}
+
+std::cout<< "+----+----------------+-----------+--------------+-------+-----+-------+----+\n";
+std::cout<<"| Num | UserID | Passenger Names | Age | EmailID | HomeAddress | PhoneNumber |\n";
+std::cout<<"+-----+----------------+-----------+--------------+-------+-----+-------+----+\n";
+//std::cout << "|" << delete.num << "|" << delete.userID << "|" << delete.passengerName << "|" << delete.age << "|" << delete.emailID << "|" << delete.homeAddress << "|" << delete.phoneNumber << std::endl;	
+}
